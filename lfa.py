@@ -7,11 +7,12 @@ initialState = int(inputf.readline())
 nrOfValidStates = int(inputf.readline())
 validStates = [int(x) for x in inputf.readline().split()]
 nrOfTransitions = int(inputf.readline())
-transitions = [[{char : [] for char in chars}][0] for x in range(nrOfStates)]
+transitions = [[{char: [] for char in chars}][0] for x in range(nrOfStates)]
 for i in range(nrOfTransitions):
     transition = inputf.readline().split()
     transitions[int(transition[0])][transition[1]].append(int(transition[2]))
-cuv = inputf.readline()
+print("Word: ")
+cuv = input()
 states = []
 valid = False
 states.append((initialState, 0))
